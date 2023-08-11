@@ -4,6 +4,8 @@ import Products from "./components/Shop/Products";
 import { useSelector } from "react-redux";
 function App() {
   const iscartopen = useSelector((state) => state.cart.showcart);
+  const cartitem = useSelector((state) => state.cartfunction.items);
+  console.log(cartitem);
   return (
     <Layout>
       {iscartopen && <Cart />}
