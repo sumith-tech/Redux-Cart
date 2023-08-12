@@ -6,6 +6,10 @@ const cartFunctionSlice = createSlice({
   name: "cartfunction",
   initialState: initialCartFunctionstate,
   reducers: {
+    fetchCart(state, action) {
+      state.items = action.payload;
+    },
+
     addtoCart(state, action) {
       const newItem = action.payload;
       const existingItem = state.items.find((item) => newItem.id === item.id);
